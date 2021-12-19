@@ -4,6 +4,8 @@ import {
     View,
     Text,
     StyleSheet,
+    TouchableOpacity,
+    Alert,
 
 } from 'react-native'
 
@@ -11,11 +13,16 @@ import waterGlass from '../assets/water-glass.png'
 
 
 export default function CatagoryListItem(props) {
+    const {category} = props
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>phong ne</Text>
-            <Image style={styles.categoryImage} source={waterGlass} />
-        </View>
+        <TouchableOpacity activeOpacity={0.3} onPress={ () => {
+            Alert.alert('click vo ne');
+        }}>
+            <View style={styles.container}>
+                <Text style={styles.title}>{category.name}</Text>
+                <Image style={styles.categoryImage} source={waterGlass} />
+            </View>
+        </TouchableOpacity>
     );
 }
 
@@ -24,7 +31,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 16,
         borderRadius: 4,
-        
+
         shadowColor: 'black',
         shadowOpacity: 0.5,
         shadowRadius: 10,
