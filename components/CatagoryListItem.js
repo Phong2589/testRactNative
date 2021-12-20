@@ -13,11 +13,9 @@ import waterGlass from '../assets/water-glass.png'
 
 
 export default function CatagoryListItem(props) {
-    const {category} = props
+    const {category, onPress} = props
     return (
-        <TouchableOpacity activeOpacity={0.3} onPress={ () => {
-            Alert.alert('click vo ne');
-        }}>
+        <TouchableOpacity activeOpacity={0.3} onPress={ onPress }>
             <View style={styles.container}>
                 <Text style={styles.title}>{category.name}</Text>
                 <Image style={styles.categoryImage} source={waterGlass} />
