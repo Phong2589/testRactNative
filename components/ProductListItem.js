@@ -38,11 +38,13 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: '#2f95dc',
     },
-    shadow:{
-        shadowColor: '#000',
-        shadowOpacity: 0.3,
+    shadow: {
+    
+        shadowColor: 'black',
+        shadowOpacity: 0.5,
         shadowRadius: 10,
-        shadowOffset: {width: 0, height: 0}
+        shadowOffset: { width: 0, height: 0},
+        elevation: 3,
     },
     container: {
         marginBottom: 20,
@@ -61,6 +63,7 @@ const styles = StyleSheet.create({
     name: {
         fontSize: 16,
         marginBottom: 8,
+        overflow: 'hidden',
     },
     priceRow: {
         flexDirection: 'row',

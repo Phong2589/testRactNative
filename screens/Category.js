@@ -40,11 +40,12 @@ export default class Category extends React.Component {
       data={this.state.products} 
       numColumns={2}
       renderItem={({item}) => 
-        <ProductListItem 
-          product = {item} 
-          />}
+      <View style={styles.wrapper}>
+        <ProductListItem product = {item}  />
+      </View>
+      }
       keyExtractor={ (item) => `${item.id}` }
-      contentContainerStyle = {{}}
+      contentContainerStyle = {styles.container}
     />
     );
   }
@@ -53,11 +54,10 @@ export default class Category extends React.Component {
 
   const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      alignItems: 'stretch',
-      backgroundColor: '#fff',
-      justifyContent: 'center',
-      paddingLeft: 16,
-      paddingRight: 16,
+      paddingTop: 8,
     },
+    wrapper: {
+      flex: 1,
+      paddingHorizontal: 8,
+    }
   });

@@ -1,0 +1,29 @@
+{
+    "products" : [
+    {
+      "id": 1,
+      "images": [
+        {
+          "url": "https://res.cloudinary.com/pqshop/image/upload/v1639988213/echkidieu_i6imiw.jpg"
+        }
+      ],
+      "name": "gau bong",
+      "price": "100000"
+    },
+    {
+      "id": 2,
+      "images": [
+        {
+          "url": "https://res.cloudinary.com/pqshop/image/upload/v1639988213/echkidieu_i6imiw.jpg"
+        }
+      ],
+      "name": "gau bong so 2",
+      "price": "300000"
+    }
+  ],
+  "categories": [
+    {"id": 1, "name": "ly thuy tinh"},
+    {"id": 2, "name": "gau bong"},
+    {"id": 3, "name": "do choi lap rap"}
+  ]
+}
