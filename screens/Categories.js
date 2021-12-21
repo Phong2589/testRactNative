@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, FlatList } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, FlatList, Alert } from 'react-native';
 import CatagoryListItem from '../components/CatagoryListItem';
 import axios from 'axios';
 
@@ -18,17 +18,17 @@ export default class Categories extends React.Component {
     };
   }
 
-  componentDidMount() {
-    axios.get('http://localhost:3000/categories')
-      .then(res => {
+  async componentDidMount() {
+    axios.get('/categories')
+      .then( res => {
+        console.log(res)
         this.setState({
           categories: res.data
         })
-        console.log('phong ne')
       })
       .catch(error => {
-        console.log('phong ne 123')
         console.error(error)
+        console.log('bi loi ne')
       })
   }
 
@@ -50,7 +50,8 @@ export default class Categories extends React.Component {
             onPress={
               () => {
                 navigation.navigate('DetailProduct', {
-                  categoryName: item.name
+                  categoryName: item.name,
+                  id: item.id
                 });
               }}
           />}

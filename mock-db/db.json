@@ -8,7 +8,8 @@
         }
       ],
       "name": "gau bong",
-      "price": "100000"
+      "price": "100000",
+      "category": 1
     },
     {
       "id": 2,
@@ -18,7 +19,19 @@
         }
       ],
       "name": "gau bong so 2",
-      "price": "300000"
+      "price": "300000",
+      "category": 2
+    },
+    {
+      "id": 3,
+      "images": [
+        {
+          "url": "https://res.cloudinary.com/pqshop/image/upload/v1639988213/echkidieu_i6imiw.jpg"
+        }
+      ],
+      "name": "gau bong 3",
+      "price": "100000",
+      "category": 1
     }
   ],
   "categories": [
